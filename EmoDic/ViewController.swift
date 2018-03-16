@@ -9,11 +9,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var gawdlytableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        gawdlytableview.dataSource = self
+        gawdlytableview.dataDelegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
