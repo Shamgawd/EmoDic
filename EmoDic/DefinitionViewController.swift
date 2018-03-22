@@ -27,8 +27,22 @@ class DefinitionViewController: UIViewController {
         if emoji == "🐬" {
           definitionLabel.text = "Issa dolphin"
         }
-
-    override func didReceiveMemoryWarning() {
+        if emoji == "💩" {
+            definitionLabel.text = "Pile o' Poo"
+        }
+        if emoji == "🤬" {
+            definitionLabel.text = "Cussin'"
+        }
+        if emoji == "😍" {
+            definitionLabel.text = "Looking at something lovely"
+        }
+        if emoji == "🐒" {
+            definitionLabel.text = "Sam's Monkey"
+        }
+        if emoji == "😭" {
+            definitionLabel.text = "Saw something hilarious"
+        }
+        func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
     }
