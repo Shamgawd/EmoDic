@@ -14,50 +14,19 @@ class DefinitionViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
-    var emoji = "NO EMOJI"
+    var emoji = Emoji()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.stringEmoji
+        creationYearLabel.text = "OG Date: \(emoji.creationYear)"
+        categoryLabel.text = "Category: \(emoji.category)"
+        definitionLabel.text = emoji.definition
         
-        if emoji == "🦉" {
-          definitionLabel.text = "Sham's Owl"
-            categoryLabel.text = "Animal"
-            creationYearLabel.text = "CreationYear: 2008"
-        }
-        if emoji == "🐬" {
-          definitionLabel.text = "Issa dolphin"
-            categoryLabel.text = "Animal"
-            creationYearLabel.text = "CreationYear: 2008"
-        }
-        if emoji == "💩" {
-            definitionLabel.text = "Pile o' Poo"
-            categoryLabel.text = "Smiley"
-            creationYearLabel.text = "CreationYear: 2008"
-        }
-        if emoji == "🤬" {
-            definitionLabel.text = "Cussin'"
-            categoryLabel.text = "Smiley"
-            creationYearLabel.text = "CreationYear: 2008"
-        }
-        if emoji == "😍" {
-            definitionLabel.text = "Looking at something lovely"
-            categoryLabel.text = "Smiley"
-            creationYearLabel.text = "CreationYear: 2008"
-        }
-        if emoji == "🐒" {
-            definitionLabel.text = "Sam's Monkey"
-            categoryLabel.text = "Animal"
-            creationYearLabel.text = "CreationYear: 2008"
-        }
-        if emoji == "😭" {
-            definitionLabel.text = "Saw something hilarious"
-            categoryLabel.text = "Smiley"
-            creationYearLabel.text = "CreationYear: 2008"
-        }
+    
         func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
